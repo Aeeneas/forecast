@@ -6,6 +6,12 @@
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkReply>
 #include <QtNetwork/QNetworkRequest>
+#include <QTextEdit>
+#include <QtXml>
+#include <QtXmlPatterns/QtXmlPatterns>
+#include <QDomElement>
+#include <qdom.h>
+//#include <xmlsyntaxhighlighter.h>
 
 namespace Ui {
 class forecast;
@@ -25,6 +31,8 @@ public slots:
 
 private:
     Ui::forecast *ui;
+    QNetworkAccessManager *manager;
+    QTextEdit *text1;
 };
 
 #endif // FORECAST_H
