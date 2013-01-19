@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'forecast.ui'
 **
-** Created: Fri 18. Jan 16:49:37 2013
+** Created: Sat 19. Jan 12:20:39 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

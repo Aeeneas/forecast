@@ -11,7 +11,11 @@
 #include <QtXmlPatterns/QtXmlPatterns>
 #include <QDomElement>
 #include <qdom.h>
-//#include <xmlsyntaxhighlighter.h>
+#include <QPainter>
+#include <QLabel>
+#include <QGraphicsView>
+#include <QVBoxLayout>
+#include <QFontDatabase>
 
 namespace Ui {
 class forecast;
@@ -24,10 +28,17 @@ class forecast : public QWidget
 public:
     explicit forecast(QWidget *parent = 0);
     ~forecast();
+    QString parsingXML(QString);
+    void drawPicture(QString);
+    QGraphicsView view;
+    QString tempNiz;
+
 
 public slots:
    void takeWeather();
    void loadFinished(QNetworkReply*);
+   void drawSlot();
+
 
 private:
     Ui::forecast *ui;
