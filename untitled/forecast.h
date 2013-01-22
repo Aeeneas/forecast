@@ -1,5 +1,6 @@
 #ifndef FORECAST_H
 #define FORECAST_H
+
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QWidget>
@@ -17,7 +18,7 @@
 #include <QVBoxLayout>
 #include <QFontDatabase>
 #include <QEventLoop>
-#include <FreeImageQt.h>
+#include <FreeImage.h>
 
 namespace Ui {
 class forecast;

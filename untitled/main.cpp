@@ -4,6 +4,7 @@
 
 int main(int argc, char *argv[])
 {
+
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("CP1251")); //eciaiaiey
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("CP1251")); //eciaiaiey
     QTextCodec::setCodecForTr(QTextCodec::codecForName("CP1251")); //eciaiaiey

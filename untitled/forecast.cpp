@@ -97,12 +97,12 @@ if (fontId == 0){
     painter->setFont(font);
 }
 // you probably want the to draw the text to the rect of the image
-painter->drawText(677,250, tempList[0]+".."+ tempList[1]);
-painter->drawText(677,380, tempList[3]+".."+ tempList[4]);
-painter->drawText(677,480, tempList[6]+".."+ tempList[7]);
-painter->drawImage(573, 250, icon1);
-painter->drawImage(573, 350, icon2);
-painter->drawImage(573, 450, icon3);
+painter->drawText(677,272, tempList[0]+".."+ tempList[1]);
+painter->drawText(677,375, tempList[3]+".."+ tempList[4]);
+painter->drawText(677,466, tempList[6]+".."+ tempList[7]);
+painter->drawImage(573, 220, icon1);
+painter->drawImage(573, 325, icon2);
+painter->drawImage(573, 417, icon3);
 
 /*QLabel* imageLabel = new QLabel();
 imageLabel->setPixmap(QPixmap::fromImage(image));
@@ -119,6 +119,10 @@ foreach(out, tempList){
     qDebug()<<out;
 }
 image.save("out.png", "PNG");
+FREE_IMAGE_FORMAT fif = FreeImage_GetFileType("out.png", 1);
+FIBITMAP *dib = FreeImage_Load(fif,"out.png", 1);
+FreeImage_Save(FIF_PNG, dib, "out1.png",1);
+FreeImage_Save(FIF_TARGA, dib, "out.tga", 2);
 
 }
 

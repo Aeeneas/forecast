@@ -16,3 +16,4 @@ SOURCES += main.cpp\
 HEADERS  += forecast.h
 
 FORMS    += forecast.ui
+LIBS += FreeImage.lib
