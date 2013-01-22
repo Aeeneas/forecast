@@ -16,6 +16,8 @@
 #include <QGraphicsView>
 #include <QVBoxLayout>
 #include <QFontDatabase>
+#include <QEventLoop>
+#include <FreeImageQt.h>
 
 namespace Ui {
 class forecast;
@@ -28,10 +30,14 @@ class forecast : public QWidget
 public:
     explicit forecast(QWidget *parent = 0);
     ~forecast();
-    QString parsingXML(QString);
+    QStringList parsingXML(QString);
     void drawPicture(QString);
     QGraphicsView view;
     QString tempNiz;
+    QEventLoop *loop;
+    int counter;
+    QStringList tempList;
+
 
 
 public slots:
@@ -44,6 +50,8 @@ private:
     Ui::forecast *ui;
     QNetworkAccessManager *manager;
     QTextEdit *text1;
+
+
 };
 
 #endif // FORECAST_H
